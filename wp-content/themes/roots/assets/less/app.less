@@ -1,0 +1,398 @@
+/*!
+ * Roots 6.5.2
+ */
+
+@import "bootstrap/bootstrap.less";
+@import "fonts.less";
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+body {
+	font-family: 'Merriweather', sans-serif;
+	font-size: 16px;
+	line-height: 2;
+	font-weight: 300;
+	background-color: #fff;
+	background-image: linear-gradient(to right, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.85) 15%, rgba(255,255,255,0.85) 85%, rgba(255,255,255,0.5) 100%),
+		url("data:image/svg+xml,%3Csvg width='20' height='12' viewBox='0 0 20 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 12c0-.622-.095-1.221-.27-1.785A5.982 5.982 0 0 0 10 12c1.67 0 3.182-.683 4.27-1.785A5.998 5.998 0 0 0 14 12h2a4 4 0 0 1 4-4V6c-1.67 0-3.182.683-4.27 1.785C15.905 7.22 16 6.622 16 6c0-.622-.095-1.221-.27-1.785A5.982 5.982 0 0 0 20 6V4a4 4 0 0 1-4-4h-2c0 .622.095 1.221.27 1.785A5.982 5.982 0 0 0 10 0C8.33 0 6.818.683 5.73 1.785 5.905 1.22 6 .622 6 0H4a4 4 0 0 1-4 4v2c1.67 0 3.182.683 4.27 1.785A5.998 5.998 0 0 1 4 6c0-.622.095-1.221.27-1.785A5.982 5.982 0 0 1 0 6v2a4 4 0 0 1 4 4h2zm-4 0a2 2 0 0 0-2-2v2h2zm16 0a2 2 0 0 1 2-2v2h-2zM0 2a2 2 0 0 0 2-2H0v2zm20 0a2 2 0 0 1-2-2h2v2zm-10 8a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z' fill='%23d2d2d2' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+
+	@media (min-width: @screen-md-min) {
+		background-image: linear-gradient(to right, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.85) 15%, rgba(255,255,255,0.85) 65%, rgba(255,255,255,0.5) 100%),
+			url("data:image/svg+xml,%3Csvg width='20' height='12' viewBox='0 0 20 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 12c0-.622-.095-1.221-.27-1.785A5.982 5.982 0 0 0 10 12c1.67 0 3.182-.683 4.27-1.785A5.998 5.998 0 0 0 14 12h2a4 4 0 0 1 4-4V6c-1.67 0-3.182.683-4.27 1.785C15.905 7.22 16 6.622 16 6c0-.622-.095-1.221-.27-1.785A5.982 5.982 0 0 0 20 6V4a4 4 0 0 1-4-4h-2c0 .622.095 1.221.27 1.785A5.982 5.982 0 0 0 10 0C8.33 0 6.818.683 5.73 1.785 5.905 1.22 6 .622 6 0H4a4 4 0 0 1-4 4v2c1.67 0 3.182.683 4.27 1.785A5.998 5.998 0 0 1 4 6c0-.622.095-1.221.27-1.785A5.982 5.982 0 0 1 0 6v2a4 4 0 0 1 4 4h2zm-4 0a2 2 0 0 0-2-2v2h2zm16 0a2 2 0 0 1 2-2v2h-2zM0 2a2 2 0 0 0 2-2H0v2zm20 0a2 2 0 0 1-2-2h2v2zm-10 8a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z' fill='%23d2d2d2' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+	}
+}
+
+.wrapper {
+	overflow-x: hidden;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.banner {
+	position: -moz-sticky;
+	position: -webkit-sticky;
+	position: -ms-sticky;
+	position: sticky;
+	padding-top: 20px;
+}
+
+.site-logo {
+	color: @text-color;
+	font-size: 3em;
+	font-family: 'Abril Fatface';
+	font-weight: 400;
+	letter-spacing: -0.01em;
+	line-height: 0.9;
+	
+	@media (min-width: @screen-sm-min) {
+		font-size: 3.5em;
+	}
+
+	.icon-ohio {
+		font-size: 0.75em;
+		color: @brand-blue;
+	}
+	span.ohio { display: none; }
+}
+
+.tagline {
+	font-style: italic;
+	color: @gray;
+	display: inline-block;
+	font-size: 0.75em;
+	margin-bottom: 0.5em;
+}
+
+.mobile-menu {
+	clear: both;
+}
+
+.navbar-toggle {
+	z-index: 1;
+}
+
+/* ==========================================================================
+   Content
+   ========================================================================== */
+
+.content { }
+
+
+
+/* ==========================================================================
+   Primary Content
+   ========================================================================== */
+
+.main {
+	@media (max-width: @screen-xs-max) {
+		max-width: 40em;
+		margin: 0 auto;
+		float: none;
+	}
+
+	.article-wrap {
+		border-bottom: 1px solid #eee;
+		padding: 1em 0;
+	}
+
+
+
+}
+
+/* Gallery Shortcode */
+.gallery-row { padding: 15px 0; }
+
+
+
+/* ==========================================================================
+   Sidebar
+   ========================================================================== */
+
+.sidebar { }
+
+/* ==========================================================================
+   Posts
+   ========================================================================== */
+
+.hentry header { }
+.hentry time { }
+.hentry .byline { }
+.hentry .entry-content { }
+.hentry footer { }
+
+.hentry {
+	.icon-twitter { display: none; }
+
+	a {
+		word-break: break-word;
+		//word-break: break-all;
+	}
+}
+
+.entry-title {
+	.h1;
+	
+	a {
+		color: @text-color;
+	}
+	
+	&__permalink {
+		color: @brand-blue;
+		font-size: 0.5em;
+	}
+}
+
+time.published {
+	position: relative;
+	display: block;
+	font-variant: small-caps;
+	margin-bottom: 0.25em;
+	line-height: 1.1;
+	font-family: 'Abril Fatface', serif;
+	
+	@media (min-width: @screen-sm-min) {
+			font-size: 1.3em;
+		}
+
+	.single-post & {
+		margin-top: 0.5em;
+	}
+}
+
+.post-categories {
+	.list-inline;
+	font-size: 0.75em;
+	margin: 0;
+
+	li {
+		padding: 0;
+		&:after {
+			content: ','
+		}
+
+		&:last-child:after {
+			content: '';
+		}
+	}
+
+	.single-post & {
+		margin-bottom: 1em;
+	}
+}
+
+.icon-calendar-block {
+	display: block;
+	color: @gray-light;
+	font-size: 2em;
+	margin-bottom: 0.75em;
+}
+
+.entry-summary {
+	.btn {
+		@media (min-width: @screen-sm-min) {
+			margin-left: -15px;
+		}
+	}
+}
+
+.post-image img, .entry-content img, .entry-summary img {
+	display: block;
+	margin: 1em 0 1.5em 0;
+	max-width: 100%;
+	height: auto !important;
+	max-height: 80%;
+}
+
+figure {
+	margin: 1em 0 1.5em 0;
+}
+
+.entry-content figure img, .entry-summary figure img {
+	margin-bottom: 0;
+}
+
+figcaption {
+	display: block;
+	clear: both;
+	text-align: center;
+	font-style: italic;
+}
+
+.entry-permalink {
+	.small;
+	margin-top: 5px;
+
+	.twitter-link + & {
+		margin-top: 10px;
+	}
+}
+
+.hentry.category-twitter-2 {
+	h2 { display: none; }
+	.icon-twitter {
+		display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    top: -0.1em;
+	}
+
+	.published {
+		font-size: 1.7em;
+		font-variant: none;
+		line-height: 0.9;
+		
+		@media (min-width: @screen-sm-min) {
+			font-size: 2.1em;
+		}
+		
+		span {
+			color: @brand-blue;
+			white-space: nowrap;
+		}
+	}
+	
+	.twitter-entry-title {
+		color: @text-color;
+	}
+
+	.entry-summary {
+		.h4;
+		font-family: Martel, serif;
+		letter-spacing: -0.02em;
+		line-height: 1.4em;
+		font-weight: 400;
+	}
+
+	.entry-summary, .entry-content {
+		.large { font-size: 2rem; }
+		.small { font-size: 0.75rem; }
+	}
+}
+
+.icon-twitter-blue {
+	color: #55acee;
+}
+
+.img-wide {
+	&, .post-image &, .entry-content &, .entry-summary & {
+		position: relative;
+		margin-left: -15%;
+		margin-right: -15%;
+		width: 130%;
+		max-width: 1170px;
+		max-height: 9999em;
+		
+		@media (min-width: @screen-sm-min) {
+			margin-left: -25%;
+			margin-right: -25%;
+			width: 150%;
+		}
+		
+		@media (min-width: @screen-md-min) {
+			margin-left: -12.5%;
+		}
+		
+		@media (min-width: @screen-lg-min) {
+			max-width: 1500px;
+		}
+	}
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.content-info {
+	background: fade(#dfdfdf, 75%);
+	margin-top: 2em;
+	padding: 2em 0;
+
+	.flickr-me-feed a.flickr-me-grid {
+		margin: 0 1% 0.75em;
+		width: 31%;
+		max-width: 165px;
+	}
+}
+
+.copyright {
+	margin-top: 2em;
+	padding-top: 2em;
+	margin-bottom: 2em;
+	border-top: 1px solid @gray-lighter;
+	text-align: center;
+}
+
+.list-social-icons {
+	text-align: center;
+	.icon-small;
+
+	li {
+		padding: 0 2px;
+	}
+}
+
+.archives {
+	.list-unstyled;
+}
+
+/* ==========================================================================
+   WordPress Generated Classes
+   See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+   ========================================================================== */
+
+.aligncenter { display: block; margin: 0 auto; }
+.alignleft { float: left; }
+.alignright { float: right; }
+figure.alignnone { margin-left: 0; margin-right: 0; }
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media (min-width: @screen-sm-min) {
+	.mobile-menu { clear: none; }
+	
+	.tagline {
+		margin-left: 1.5em;
+		font-size: 1em;
+	}
+
+	.copyright {
+		text-align: left;
+	}
+
+	.list-social-icons {
+		.icon-med;
+		text-align: left;
+
+		li {
+			padding: 0 1px;
+		}
+
+		footer.content-info & {
+			.pull-right;
+		}
+	}
+
+    .entry-title {
+	    font-size: 48px;
+    }
+
+	.main {
+		.article-wrap {
+			padding: 2em 0;
+		}
+	 }
+
+	.hentry.category-twitter-2 {
+		.entry-summary {
+			.h4.large;
+		}
+	}
+}

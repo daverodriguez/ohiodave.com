@@ -1,0 +1,5 @@
+.idea/
+node_modules/
+bower_components/
+npm-debug.log
+paulirish-html5-boilerplate-06dbc3e/
