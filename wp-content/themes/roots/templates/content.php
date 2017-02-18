@@ -16,7 +16,7 @@
 			</div>
 			<div class="entry-summary col-xs-12 col-md-10">
 				<p class="post-image">
-					<?php the_post_thumbnail( 'large', array( 'class' => 'img-wide' ) ); ?>
+					<?php the_post_thumbnail( 'original', array( 'class' => 'img-wide' ) ); ?>
 				</p>
 
 				<?php the_content( 'Read more&hellip;' ); ?>
