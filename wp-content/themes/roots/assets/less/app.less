@@ -79,9 +79,21 @@ body {
    Content
    ========================================================================== */
 
-.content { }
+.content {
+	p {
+		@media (min-width: @screen-md-min) {
+			font-size: 1.33vw;
+		}
 
+		@media (min-width: @screen-lg-min) {
+			font-size: 1.25vw;
+		}
 
+		@media (min-width: 1500px) {
+			font-size: 1.1vw;
+		}
+	}
+}
 
 /* ==========================================================================
    Primary Content
@@ -220,6 +232,16 @@ figcaption {
 	clear: both;
 	text-align: center;
 	font-style: italic;
+	line-height: 1.25;
+}
+
+img + figcaption, a + figcaption {
+	margin-top: 0.66em;
+	font-size: 1.1em;
+}
+
+figcaption .emoji {
+	padding-right: 0.33em;
 }
 
 .entry-permalink {
@@ -265,6 +287,22 @@ figcaption {
 		letter-spacing: -0.02em;
 		line-height: 1.4em;
 		font-weight: 400;
+
+		p {
+			@media (min-width: @screen-md-min) {
+				line-height: 1.33;
+				font-size: 3vw;
+			}
+
+			@media (min-width: @screen-lg-min) {
+				font-size: 2.66vw;
+			}
+
+			@media (min-width: 1500px) {
+				line-height: 1.33;
+				font-size: 2.33vw;
+			}
+		}
 	}
 
 	.entry-summary, .entry-content {
@@ -280,24 +318,25 @@ figcaption {
 .img-wide {
 	&, .post-image &, .entry-content &, .entry-summary & {
 		position: relative;
-		margin-left: -15%;
-		margin-right: -15%;
-		width: 130%;
+		width: 140%;
+		width: 85vmax;
 		max-width: 1170px;
 		max-height: 9999em;
-		
+		left: 50%;
+		transform: translateX(-50%);
+
 		@media (min-width: @screen-sm-min) {
-			margin-left: -25%;
+			/*margin-left: -25%;
 			margin-right: -25%;
-			width: 150%;
+			width: 150%;*/
 		}
-		
+
 		@media (min-width: @screen-md-min) {
-			margin-left: -12.5%;
+			//margin-left: -12.5%;
 		}
 		
 		@media (min-width: @screen-lg-min) {
-			max-width: 1500px;
+			//max-width: 1500px;
 		}
 	}
 }
@@ -350,6 +389,53 @@ figcaption {
 figure.alignnone { margin-left: 0; margin-right: 0; }
 
 
+/* ==========================================================================
+   Related posts
+   ========================================================================== */
+.wp_rp_content {
+	text-align: center;
+
+	@media (min-width: @screen-sm-min) {
+		text-align: left;
+	}
+
+	.wp_rp {
+		list-style: none;
+		margin: 0 0 1em;
+		padding: 0;
+		display: flex;
+
+		@media (max-width: @screen-xs-max) {
+			flex-direction: column;
+		}
+	}
+
+	li {
+		padding: 0;
+		line-height: 1.2;
+		max-width: 300px;
+		flex-basis: 33.33%;
+		flex-shrink: 0;
+		margin: 0 auto 1em;
+
+		@media (min-width: @screen-sm-min) {
+			text-align: left;
+			margin: 0 0 1em;
+
+			& + li {
+				margin-left: 1em;
+			}
+		}
+	}
+
+	img {
+		display: block;
+		width: 100%;
+		height: 70% !important;
+		object-fit: cover;
+		margin: 0 0 0.75em;
+	}
+}
 
 /* ==========================================================================
    Media Queries
